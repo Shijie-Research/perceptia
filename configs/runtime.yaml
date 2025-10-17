@@ -1,0 +1,17 @@
+hydra:
+  run:
+    dir: ./experiments/${name}/${now:%Y-%m-%d_%H-%M-%S}
+
+defaults:
+  - training: default
+  - model: default
+  - dataset: default
+
+  - experiment: ???
+
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+  - _self_
+
+
