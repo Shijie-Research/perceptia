@@ -1,0 +1,24 @@
+# @package _global_
+
+pytorch_dataset:
+
+  train:
+    _target_: perceptia.datasets.CocoDataset
+
+    img_folder: ${env:HOME}/Data/datasets/coco/images/train2017
+    ann_file: ${env:HOME}/Data/datasets/coco/annotations/instances_train2017.json
+
+
+  validation:
+    _target_: perceptia.datasets.CocoDataset
+
+    img_folder: ${env:HOME}/Data/datasets/coco/images/val2017
+    ann_file: ${env:HOME}/Data/datasets/coco/annotations/instances_val2017.json
+
+  test:
+    _target_: perceptia.datasets.CocoDataset
+
+    img_folder: ${env:HOME}/Data/datasets/coco/images/test2017
+    ann_file: ${env:HOME}/Data/datasets/coco/annotations/image_info_test-dev2017.json
+
+
